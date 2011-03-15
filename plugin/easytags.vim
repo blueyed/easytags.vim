@@ -100,6 +100,9 @@ function! s:VersionToNumber(s)
 endfunction
 
 if !s:InitEasyTags(55)
+  if exists('g:easytags_suppress_ctags_warning') && g:easytags_suppress_ctags_warning != "0"
+    finish
+  endif
   if !exists('g:easytags_ctags_version') || empty(g:easytags_ctags_version)
     let s:msg = "%s: Plug-in not loaded because Exuberant Ctags isn't installed!"
     if executable('apt-get')

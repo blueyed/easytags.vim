@@ -206,6 +206,14 @@ run UNIX and use symbolic links) execute the following Vim command:
 >
     :let g:easytags_resolve_links = 1
 
+------------------------------------------------------------------------------
+The *g:easytags_suppress_ctags_warning* option
+
+If this is set and not "0", it will suppress the warning on startup if ctags
+is not found or not recent enough.
+>
+    :let g:easytags_suppress_ctags_warning = 1
+
 ==============================================================================
 Troubleshooting ~
 
